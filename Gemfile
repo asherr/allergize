@@ -33,6 +33,9 @@ end
 
 gem 'jquery-rails'
 
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails'
+
 gem "flat-ui-rails"
 
 # To use ActiveModel has_secure_password
