@@ -1,7 +1,11 @@
 source 'https://rubygems.org'
 
 
+gem "devise"
 gem "thin"
+gem "pg"
+gem "pry"
+gem "quimby"
 
 
 gem 'rails', '3.2.13'
