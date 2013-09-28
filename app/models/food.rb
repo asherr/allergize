@@ -3,4 +3,7 @@ class Food < ActiveRecord::Base
 
   has_and_belongs_to_many :assurances
   belongs_to :menu
+
+  validates :name, presence: true
+  validates :price, numericality: true 
 end
