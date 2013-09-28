@@ -3,4 +3,6 @@ class Menu < ActiveRecord::Base
 
   belongs_to :organization
   has_many :foods
+
+  validates :name, presence: true 
 end
