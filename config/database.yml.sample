@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: allergize_development
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: allergize_test
+  host: localhost
