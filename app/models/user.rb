@@ -8,5 +8,6 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
+  has_and_belongs_to_many :assurances
   has_and_belongs_to_many :organizations
 end
