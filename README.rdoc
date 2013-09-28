@@ -2,6 +2,7 @@ Remember to:
 
 (Once)
 1. rake db:create:all
+2. rake textacular:install_trigram
 
 (Often)
 1. bundle install
