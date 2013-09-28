@@ -61,5 +61,9 @@ module Allergize
 
     # Necessary for Heroku; remember to "rake assets:precompile" before deploys!
     config.assets.initialize_on_precompile = false
+
+    config.generators do |g|
+      g.test_framework :rspec
+    end
   end
 end
