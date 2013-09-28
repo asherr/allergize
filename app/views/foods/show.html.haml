@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @food.name
+%p
+  %b Price:
+  = @food.price
+%p
+  %b Ingredients:
+  = @food.ingredients
+
+= link_to 'Edit', edit_food_path(@food)
+\|
+= link_to 'Back', foods_path
