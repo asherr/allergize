@@ -2,7 +2,13 @@ Remember to:
 
 (Once)
 1. rake db:create:all
-2. rake textacular:install_trigram
+2. Install pg_trgm Postgres extension (assuming Postgres.app)
+* `$ psql allergize_development -h localhost`
+* `allergize_development=# create extension pg_trgm;`
+* `allergize_development=# \q`
+* `$ psql allergize_test -h localhost`
+* `allergize_test=# create extension pg_trgm;`
+* `allergize_test=# \q`
 
 (Often)
 1. bundle install
