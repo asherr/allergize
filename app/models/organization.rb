@@ -6,4 +6,7 @@ class Organization < ActiveRecord::Base
 
   validates :name, presence: true
   
+  def self.lookup_by_name (name)
+    Organization.fuzzy_search(:name => name)
+  end
 end
