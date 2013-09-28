@@ -12,7 +12,9 @@ Allergize::Application.routes.draw do
 
   devise_for :users
 
-  
+  scope "api/v0", :module => "api" do
+    match "/search" => "organizations#search", :as => "search", :via => :get
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
