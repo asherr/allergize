@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 gem "devise"
+gem "haml-rails"
 gem "thin"
 gem "pg"
 gem "pry"
@@ -24,6 +25,10 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :test do
+  gem "rspec-rails"
 end
 
 gem 'jquery-rails'
