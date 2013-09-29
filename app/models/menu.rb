@@ -28,7 +28,7 @@ class Menu < ActiveRecord::Base
         set << assurance
       end
     end
-    set.to_a
+    set.to_a.sort_by { |a| a.name }
   end
 
 end
