@@ -7,6 +7,6 @@ class Organization < ActiveRecord::Base
   validates :name, presence: true
   
   def self.lookup_by_name (name)
-    Organization.fuzzy_search(:name => name)
+    Organization.where("similarity(name, '#{name}') > 0.1")
   end
 end

@@ -7,7 +7,6 @@ gem "thin"
 gem "pg"
 gem "pry"
 gem "quimby"
-gem "textacular", "~> 3.0"
 gem "twitter-typeahead-rails"
 
 
