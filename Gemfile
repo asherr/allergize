@@ -7,6 +7,8 @@ gem "thin"
 gem "pg"
 gem "pry"
 gem "quimby"
+gem "textacular", "~> 3.0"
+
 
 
 gem 'rails', '3.2.13'
