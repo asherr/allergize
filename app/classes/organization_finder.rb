@@ -8,7 +8,6 @@ class OrganizationFinder
     checkins.each do |checkin|
       names << checkin.json["venue"]["name"]
     end
-    binding.pry
     names.each do |name|
       organizations << Organization.lookup_by_name(name)
     end
