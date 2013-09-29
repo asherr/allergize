@@ -14,6 +14,10 @@ Remember to:
 1. bundle install
 2. rake db:migrate
 
+
+Thank you to michila of vecteezy.com for the cutlery icons!
+http://www.vecteezy.com/food/47543-cutlery-vector-set
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
