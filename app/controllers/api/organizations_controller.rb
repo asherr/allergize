@@ -3,7 +3,7 @@ class Api::OrganizationsController < Api::ApiController
     organizations = Organization.lookup_by_name(params[:name])
 
     hash = organizations.map do |org|
-      { :name => org.name, :menus => org.menus }
+      { :name => org.name, :id => org.id, :menus => org.menus }
     end
 
     render :json => hash
