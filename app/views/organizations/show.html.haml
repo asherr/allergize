@@ -1,9 +1,10 @@
 %p#notice= notice
 
-%p
-  %b Name:
-  = @organization.name
+%h3= @organization.name
 
+-for @menu in @organization.menus do
+  %p
+    %a= link_to @menu.name, menu_path(@menu)
 = link_to 'Edit', edit_organization_path(@organization)
 \|
 = link_to 'Back', organizations_path
