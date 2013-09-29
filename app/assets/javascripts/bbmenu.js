@@ -63,7 +63,7 @@ $(document).ready(function() {
         this.insert();
       },
       insert: function() {
-        $(".col-md-9").append(this.$el);
+        $("#food-list").append(this.$el);
       }
     });
 
