@@ -13,18 +13,27 @@ $(document).ready(function() {
     });
     var AssuranceGroup = Backbone.Collection.extend({
       model: Assurance,
-      url: $.trim($('#menusassurances').text())
+      url: $.trim($('#menusassurances').text()),
+      selected_ids: function() {
+        var ids = [];
+        this.forEach(function(assurance) {
+          if(assurance.get("selected")) {
+            ids.push(assurance.get("id"));
+          }
+        });
+        return ids;
+      }
     });
     var AssuranceView = Backbone.View.extend({
       initialize: function() {
         this.template = Handlebars.compile($("#assurance-view").html());
-        this.$el.html(this.template(this.model.attributes));
         this.insert();
       },
       events: {
         "click": "toggle_select"
       },
       insert: function() {
+        this.render();
         $(".menu-sidebar").append(this.$el);
       },
       render: function() {
@@ -48,7 +57,22 @@ $(document).ready(function() {
     });
 
 
-    var Food = Backbone.Model.extend({});
+    var Food = Backbone.Model.extend({
+      initialize: function() {
+        _.bindAll(this, "check_validity");
+        assurance_group.on("change", this.check_validity);
+        this.set("valid", true);
+      },
+      check_validity: function() {
+                        // alert("wep");
+        ids = assurance_group.selected_ids();
+        food_ids = _.map(this.get("assurances"), function(a) { return a["id"]; })
+        if(_.intersection(ids, food_ids).length < ids.length)
+          this.set("valid", false);
+        else
+          this.set("valid", true);
+      }
+    });
 
     var Menu = Backbone.Collection.extend({
       model: Food,
@@ -57,13 +81,22 @@ $(document).ready(function() {
 
     var FoodView = Backbone.View.extend({
       initialize: function() {
+        _.bindAll(this, "render");
         this.template = Handlebars.compile($("#food-view").html());
-        this.$el.html(this.template(this.model.attributes));
-        $(this.$el).addClass("food-blurb");
         this.insert();
+        this.model.on("change", this.render);
       },
       insert: function() {
+        this.render();
+        $(this.$el).addClass("food-blurb");
         $("#food-list").append(this.$el);
+      },
+      render: function() {
+        this.$el.html(this.template(this.model.attributes));
+        if(this.model.get("valid"))
+          $(this.$el).show();
+        else
+          $(this.$el).hide();
       }
     });
 
@@ -72,7 +105,7 @@ $(document).ready(function() {
     menu.fetch({
       success: function() { 
         menu.forEach(function(food) {
-          new FoodView({ model: food });
+          var view = new FoodView({ model: food });
         });
       }
     });
