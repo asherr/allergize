@@ -21,4 +21,14 @@ class Menu < ActiveRecord::Base
     frequency_can_eat / foods.size
   end
 
+  def assurances
+    set = Set.new
+    foods.each do |food|
+      food.assurances.each do |assurance|
+        set << assurances
+      end
+    end
+    set.to_a
+  end
+
 end
