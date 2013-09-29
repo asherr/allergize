@@ -1,4 +1,5 @@
 %h3 Find Your Menu
-%h4 Suggested Menus
-- @suggested_orgs.each do |org|
-  = link_to org.name, organization_path(org)
+-if !@suggested_orgs.nil?
+  %h4 Suggested Menus
+  - @suggested_orgs.each do |org|
+    = link_to org.name, organization_path(org)
