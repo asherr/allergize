@@ -1,0 +1,44 @@
+Pizza:
+  name: Pizza 
+  assurances: tree_nut_free, gluten_free
+  menu: Diner
+
+Chex_Cereal:
+  name: Chex Cereal
+  assurances: dairy_free, tree_nut_free, egg_free, gluten_free
+  menu: Diner
+
+Bread:
+  name: Bread
+  assurances: dairy_free, tree_nut_free, gluten_free
+  menu: Diner
+
+Muffin:
+  name: Muffin
+  assurances: dairy_free, tree_nut_free, gluten_free
+  menu: Diner
+
+Cookie:
+  name: Cookie
+  assurances: tree_nut_free, gluten_free
+  menu: Diner
+
+Quinoa:
+  name: Quinoa
+  assurances: tree_nut_free, gluten_free, dairy_free, egg_free
+  menu: Diner
+
+Bagel:
+  name: Bagel
+  assurances: tree_nut_free, gluten_free, dairy_free
+  menu: Diner
+
+Macaroni_Cheese:
+  name: Macaroni and Cheese
+  assurances: tree_nut_free, gluten_free, egg_free
+  menu: Diner
+
+Oatmeal:
+  name: Oatmeal
+  assurances: tree_nut_free, gluten_free, dairy_free, egg_free
+  menu: Diner

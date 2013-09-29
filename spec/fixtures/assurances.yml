@@ -1,0 +1,11 @@
+egg_free:
+  name: egg free 
+
+gluten_free:
+  name: gluten free
+
+tree_nut_free:
+  name: tree nut free
+
+dairy_free:
+  name: dairy free
