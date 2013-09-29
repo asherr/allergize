@@ -88,6 +88,10 @@ input[type="text"]:focus {
   margin-left: -140px;
 }
 
+.navbar-form input[type="text"] {
+  width: auto;
+}
+
 [type="submit"].btn {
   margin-top: 10px;
 }

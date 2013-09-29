@@ -6,6 +6,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    = render "shared/internal_api"
   %body.escher
     .container.landing-container
       = yield
