@@ -80,3 +80,10 @@ input[type="text"]:focus {
   background-image: url(escheresque.png);
 }
 
+.landing-button-group {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 280px;
+  margin-left: -140px;
+}
