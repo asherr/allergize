@@ -42,3 +42,8 @@ Oatmeal:
   name: Oatmeal
   assurances: tree_nut_free, gluten_free, dairy_free, egg_free
   menu: Diner
+
+SaltyPimp:
+  name: Salty Pimp
+  assurances: tree_nut_free
+  menu: BigGay
