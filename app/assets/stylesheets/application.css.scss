@@ -41,3 +41,7 @@ a {
 		float: right;
 	}
 }
+
+input[type="text"]:focus {
+  border-color: $yellow;
+}
