@@ -25,7 +25,7 @@ class Menu < ActiveRecord::Base
     set = Set.new
     foods.each do |food|
       food.assurances.each do |assurance|
-        set << assurances
+        set << assurance
       end
     end
     set.to_a
