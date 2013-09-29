@@ -3,6 +3,7 @@
 @import "flat-ui";
 @import "flatui";
 @import "variables";
+@import "typeahead";
 
 a {
 	text-decoration: none;
@@ -40,4 +41,8 @@ a {
 	.price {
 		float: right;
 	}
+}
+
+input[type="text"]:focus {
+  border-color: $yellow;
 }

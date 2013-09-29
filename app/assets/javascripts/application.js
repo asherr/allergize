@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
 
 // Include all twitter's javascripts
 //= require twitter/bootstrap
@@ -30,3 +29,7 @@
 //= require twitter/bootstrap/collapse
 //= require twitter/bootstrap/carousel
 //= require twitter/bootstrap/affix
+
+//= require twitter/typeahead.min
+
+//= require_tree .

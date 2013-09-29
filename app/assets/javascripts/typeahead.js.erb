@@ -1,0 +1,12 @@
+$(document).ready(function() {
+  $('#orgbar').typeahead({
+    name: 'organizations',
+    valueKey: 'name',
+    remote: $.trim($('#searchapi').text())
+  });
+
+  $('#orgbar').on('typeahead:selected', function(e, datum) {
+    menu = $.trim($('#menushow').text())
+    window.location.href = menu + "/" + datum.id;
+  });
+});
