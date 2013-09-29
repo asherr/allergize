@@ -9,7 +9,9 @@ class OrganizationFinder
       names << checkin.json["venue"]["name"]
     end
     names.each do |name|
-      organizations << Organization.lookup_by_name(name)
+      Organization.lookup_by_name(name).each do |org|
+        organizations << org
+      end
     end
     organizations.to_a
   end
