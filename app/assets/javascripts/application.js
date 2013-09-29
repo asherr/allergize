@@ -32,4 +32,9 @@
 
 //= require twitter/typeahead.min
 
+//= require underscore-min
+//= require backbone-min
+
+//= require handlebars
+
 //= require_tree .

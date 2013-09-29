@@ -20,7 +20,8 @@ Allergize::Application.routes.draw do
 
   scope "api/v0", :module => "api" do
     match "/search" => "organizations#search", :as => "search", :via => :get
-    match "/menus" => "menus#show", :via => :get
+    match "/menus/foods" => "menus#foods", :as => "menusfoods", :via => :get
+    match "/menus/assurances" => "menus#assurances", :as => "menusassurances", :via => :get
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

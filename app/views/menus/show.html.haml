@@ -1,22 +1,15 @@
+= render "assurance_view"
+= render "food_view"
+#menusassurances{ :style => "display: none;" }
+  = "#{menusassurances_url}?id=#{@menu.id}"
+#menusfoods{ :style => "display: none;" }
+  = "#{menusfoods_url}?id=#{@menu.id}"
+
 %p#notice= notice
 %h4.menu-header.col-md-9.col-md-offset-3
   = @menu.name
 .col-md-3.menu-sidebar
-  - @assurances.each do |assurance|
-    .option
-      = assurance.name.titleize
-      .glyphicon.glyphicon-unchecked
 
 .col-md-9
-
-  - @menu.foods.each do |food|
-    .food-blurb
-      %h1
-        = food.name
-      .price
-        = food.price
-      - food.assurances.sort_by { |a| a.name }.each do |assurance|
-        .assurance
-          = assurance.name.titleize
-
-
+  %h3
+    = @menu.name

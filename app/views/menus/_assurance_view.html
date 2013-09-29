@@ -1,0 +1,13 @@
+<script id="assurance-view" type="text/x-handlebars-template">
+  {{#if selected}}
+    <div class="option active">
+      {{name}}
+      <div class="glyphicon glyphicon-ok-circle"></div>
+    </div>
+  {{else}}
+    <div class="option">
+      {{name}}
+      <div class="glyphicon glyphicon-unchecked"></div>
+    </div>
+  {{/if}}
+</script>

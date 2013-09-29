@@ -21,31 +21,31 @@ a {
   line-height: 28px;
 }
 
-.food-blurb {
-  background-color: desaturate(lighten($yellow, 30%), 5%);
-  border-radius: 6px;
-  padding: .5em;
-  margin-bottom: 6px;
+  .food-blurb {
+    background-color: desaturate(lighten($yellow, 30%), 5%);
+    border-radius: 6px;
+    padding: .5em;
+    margin-bottom: 6px;
 
-  &:last-of-type {
-    margin-bottom: 0px;
-  }
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
 
-  h1 {
-    font-size: 24px;
-    color: $superdark-grey;
+    h1 {
+      font-size: 24px;
+      color: $superdark-grey;
+    }
+    .assurance {
+      display: inline-block;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: darken(saturate($red-shadow, 5%), 10%);
+      color: $white;
+    }
+    .price {
+      float: right;
+    }
   }
-  .assurance {
-    display: inline-block;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: darken(saturate($red-shadow, 5%), 10%);
-    color: $white;
-  }
-  .price {
-    float: right;
-  }
-}
 
 input[type="text"]:focus {
   border-color: $yellow;
@@ -138,44 +138,46 @@ a {
   font-weight: bold;
   padding: 0;
   border-radius: 6px;
-  .option {
-    height: 48px;
-    box-sizing: border-box;
-    border-bottom: 2px $red-shadow solid;
-    width: 100%;
-    margin: none; 
-    padding-left: 17px;
-    padding-right: 17px;
-    -webkit-transition: background-color .25s, color .25s, border-bottom-color .25s;
-    -moz-transition: background-color .25s, color .25s, border-bottom-color .25s;
-    -o-transition: background-color .25s, color .25s, border-bottom-color .25s;
-    transition: background-color .25s, color .25s, border-bottom-color .25s;
+  div {
+    .option {
+      height: 48px;
+      box-sizing: border-box;
+      border-bottom: 2px $red-shadow solid;
+      width: 100%;
+      margin: none; 
+      padding-left: 17px;
+      padding-right: 17px;
+      -webkit-transition: background-color .25s, color .25s, border-bottom-color .25s;
+      -moz-transition: background-color .25s, color .25s, border-bottom-color .25s;
+      -o-transition: background-color .25s, color .25s, border-bottom-color .25s;
+      transition: background-color .25s, color .25s, border-bottom-color .25s;
 
-    &:first-of-type {
-      border-top-right-radius: 6px;
-      border-top-left-radius: 6px;
-    }
+      &:first-of-type {
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+      }
 
-    &:last-of-type {
-      border-color: $red;
-      border-bottom-right-radius: 6px;
-      border-bottom-left-radius: 6px;
-    }
+      &:last-of-type {
+        border-color: $red;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
 
-    &:hover {
-      background-color: $red-shadow;
-      border-color: $red-shadow;
-    }
+      &:hover {
+        background-color: $red-shadow;
+        border-color: $red-shadow;
+      }
 
-    .glyphicon {
-      float: right;
-      line-height: 48px;
-    }
+      .glyphicon {
+        float: right;
+        line-height: 48px;
+      }
 
-    &.active {
-      background-color: $red-shadow;
-      border-color: $red-shadow;
-      color: $yellow;
+      &.active {
+        background-color: $red-shadow;
+        border-color: $red-shadow;
+        color: $yellow;
+      }
     }
   }
 }
