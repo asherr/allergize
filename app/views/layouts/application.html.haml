@@ -6,12 +6,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
-    #searchapi{ :style => "display: none;" }
-      = "#{search_url}?name=%QUERY"
-    #menushow{ :style => "display: none;" }
-      -# Hacky way of making show url from index url for menus (via js append)
-      = organizations_url
-
+    = render "shared/internal_api"
   %body
     .container
       %header

@@ -87,3 +87,7 @@ input[type="text"]:focus {
   width: 280px;
   margin-left: -140px;
 }
+
+.navbar-form input[type="text"] {
+  width: auto;
+}
