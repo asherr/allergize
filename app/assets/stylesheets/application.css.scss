@@ -1,3 +1,17 @@
+@import "normalize";
 @import "twitter/bootstrap";
 @import "flat-ui";
+@import "flatui";
 @import "variables";
+
+a {
+	text-decoration: none;
+}
+
+.navbar-inverse .nav > li > a {
+	border: 0;
+}
+
+.navbar-inverse .nav > li > a {
+	line-height: 28px;
+}

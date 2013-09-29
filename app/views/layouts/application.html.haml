@@ -8,4 +8,25 @@
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
   %body
     .container
+      %header
+        %h1 Allergize
+      %nav.navbar.navbar-inverse{role: "navigation"}
+        %ul.nav.navbar-nav
+          %li
+            %a
+              %span.glyphicon.glyphicon-home 
+              Home
+          %li.active
+            %a Current Thing
+          %li
+            %a Organizations
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a Account
+          %li
+            %a Sign Out
+          %li
+            %form.navbar-form.navbar-right{role: "search"}
+              .form-group
+                %input.form-control{placeholder: "Search", type: "text"}/
       = yield
