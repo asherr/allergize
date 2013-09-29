@@ -10,7 +10,7 @@
   %body
     .container
       %header
-        %h1 Allergize
+        =image_tag('logo 1.png')
       %nav.navbar.navbar-inverse{role: "navigation"}
         %ul.nav.navbar-nav
           %li
@@ -36,5 +36,5 @@
           %li
             %form.navbar-form.navbar-right{role: "search"}
               .form-group
-                %input#orgbar.twitter-typeahead.tt-query.form-control{placeholder: "Search", type: "text"}/
+                %input#orgbar.twitter-typeahead.tt-query.form-control{placeholder: "Where are you eating?", type: "text"}/
       = yield

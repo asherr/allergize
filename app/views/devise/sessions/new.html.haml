@@ -1,0 +1,14 @@
+.col-md-3.sign-in-up-wrapper
+  .sign-in-up-inner
+    %h3 Sign in
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      %div
+        = f.label :email
+        %br/
+        = f.email_field :email, :autofocus => true
+      %div
+        = f.label :password
+        %br/
+        = f.password_field :password
+      = f.submit "Sign in", :class => 'btn btn-primary btn-wide'
+    = render "devise/shared/links"
