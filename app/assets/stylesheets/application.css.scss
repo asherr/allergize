@@ -125,6 +125,11 @@ a {
   }
 }
 
+.menu-header {
+  text-align: right;
+  margin-top: -12px;
+}
+
 .menu-sidebar {
   background-color: $red;
   font-size: 18px;
@@ -173,4 +178,36 @@ a {
       color: $yellow;
     }
   }
+}
+
+.menu-listing {
+  display: block;
+  background-color: $yellow;
+  color: $superdark-grey;
+  border-radius: 6px;
+  margin-right: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+  .name {
+    font-size: 22pt;
+    font-weight: bold;
+  }
+  .item-count {
+      color: saturate(darken($dark-grey-shadow, 20%), 15%);
+  }
+  &:hover {
+    background-color: desaturate(lighten($yellow, 15%), 5%);
+    color: $superdark-grey;
+    .item-count {
+      color: saturate(darken($dark-grey-shadow, 20%), 15%);
+    }
+  }
+
+    -webkit-transition: background-color .25s, color .25s, border-bottom-color .25s;
+    -moz-transition: background-color .25s, color .25s, border-bottom-color .25s;
+    -o-transition: background-color .25s, color .25s, border-bottom-color .25s;
+    transition: background-color .25s, color .25s, border-bottom-color .25s;
 }

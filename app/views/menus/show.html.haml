@@ -1,5 +1,6 @@
 %p#notice= notice
-
+%h4.menu-header.col-md-9.col-md-offset-3
+  = @menu.name
 .col-md-3.menu-sidebar
   - @assurances.each do |assurance|
     .option
@@ -7,8 +8,6 @@
       .glyphicon.glyphicon-unchecked
 
 .col-md-9
-  %h3
-    = @menu.name
 
   - @menu.foods.each do |food|
     .food-blurb

@@ -3,6 +3,8 @@
 %h3= @organization.name
 
 -for @menu in @organization.menus do
-  %p
-    %a= link_to @menu.name, menu_path(@menu)
+  %a.menu-listing.col-md-3{:href => menu_path(@menu)}
+    %span.name=@menu.name
+    %br
+    %span.item-count= pluralize(@menu.foods.all.size, 'items')
 
