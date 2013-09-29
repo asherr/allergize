@@ -10,7 +10,9 @@ Allergize::Application.routes.draw do
   resources :organizations
 
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "users/registrations" }
+
+  match "foursquare_callback" => "foursquare#callback", :as => "foursquare_callback"
 
   scope "api/v0", :module => "api" do
     match "/search" => "organizations#search", :as => "search", :via => :get
