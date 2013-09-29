@@ -1,12 +1,23 @@
 %p#notice= notice
 
-%h3= @menu.name
+.col-md-3.menu-sidebar
+  - @assurances.each do |assurance|
+    .option
+      = assurance.name.titleize
+      .glyphicon.glyphicon-unchecked
 
--for @food in @menu.foods do
-	.food-blurb.col-md-12
-		%h1=@food.name
-		.price=@food.price
-		-for @assurance in @food.assurances do
-			.assurance=@assurance.name.titleize
+.col-md-9
+  %h3
+    = @menu.name
+
+  - @menu.foods.each do |food|
+    .food-blurb
+      %h1
+        = food.name
+      .price
+        = food.price
+      - food.assurances.sort_by { |a| a.name }.each do |assurance|
+        .assurance
+          = assurance.name.titleize
 
 

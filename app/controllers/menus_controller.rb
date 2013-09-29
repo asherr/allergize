@@ -14,6 +14,7 @@ class MenusController < ApplicationController
   # GET /menus/1.json
   def show
     @menu = Menu.find(params[:id])
+    @assurances = @menu.assurances
 
     respond_to do |format|
       format.html # show.html.erb
