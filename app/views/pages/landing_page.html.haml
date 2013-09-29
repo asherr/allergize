@@ -5,5 +5,5 @@
   %input#orgbar.form-control{placeholder: "Search a derpage...", type: "text"}/
 
 .landing-button-group.btn-group
-  %button.btn.btn-primary.btn-wide Sign up
-  %button.btn.btn-primary.btn-wide Sign in
+  %a.btn.btn-primary.btn-wide{:href => new_user_session_path} Sign in
+  %a.btn.btn-primary.btn-wide{:href => new_user_registration_path} Sign up
