@@ -1,6 +1,11 @@
 class Api::OrganizationsController < Api::ApiController
   def search
-    @organization = Organization.lookup_by_name(params[:name])
-    render json: @organization
+    organizations = Organization.lookup_by_name(params[:name])
+
+    hash = organizations.map do |org|
+      { :name => org.name, :menus => org.menus }
+    end
+
+    render :json => hash
   end
 end
