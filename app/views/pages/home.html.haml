@@ -1,6 +1,5 @@
-%h3 Find Your Menu
+%h3 Suggested Menus
 -if !@suggested_orgs.nil?
-  %h4 Suggested Menus
   - @suggested_orgs.each do |org|
     %a.menu-listing.col-md-3{:href => organization_path(org)}
       %span.name
@@ -8,3 +7,7 @@
       %br
       %span.item-count
         Foursquare Checkin
+-else
+  %p Awh, you don't have any yet! Let's see if we can find some?
+  = link_to "Connect with Foursquare", @authorize_url, :class => 'btn btn-wide'
+
