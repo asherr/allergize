@@ -5,44 +5,78 @@
 @import "variables";
 @import "typeahead";
 
+html, body {
+  height: 100%;
+}
+
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .navbar-inverse .nav > li > a {
-	border: 0;
+  border: 0;
 }
 
 .navbar-inverse .nav > li > a {
-	line-height: 28px;
+  line-height: 28px;
 }
 
 .food-blurb {
-	background-color: desaturate(lighten($yellow, 30%), 5%);
-	border-radius: 6px;
-	padding: .5em;
-	margin-bottom: 6px;
+  background-color: desaturate(lighten($yellow, 30%), 5%);
+  border-radius: 6px;
+  padding: .5em;
+  margin-bottom: 6px;
 
-	&:last-of-type {
-		margin-bottom: 0px;
-	}
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
 
-	h1 {
-		font-size: 24px;
-		color: $superdark-grey;
-	}
-	.assurance {
-		display: inline-block;
-		padding: 5px;
-		border-radius: 5px;
-		background-color: darken(saturate($red-shadow, 5%), 10%);
-		color: $white;
-	}
-	.price {
-		float: right;
-	}
+  h1 {
+    font-size: 24px;
+    color: $superdark-grey;
+  }
+  .assurance {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: darken(saturate($red-shadow, 5%), 10%);
+    color: $white;
+  }
+  .price {
+    float: right;
+  }
 }
 
 input[type="text"]:focus {
   border-color: $yellow;
 }
+
+.landing-search {
+  display: block;
+  position: absolute;
+  top: 45%;
+  margin-top: -21px;
+  input {
+    font-size: 28px;
+    line-height: 42px;
+    height: 42px;
+  }
+}
+
+.landing-container {
+  position: relative;
+  height: 100%;
+}
+
+.landing-logo {
+  position: absolute;
+  width: 412px;
+  top: 15%;
+  left: 50%;
+  margin-left: -206px;
+}
+
+.escher {
+  background-image: url(escheresque.png);
+}
+
