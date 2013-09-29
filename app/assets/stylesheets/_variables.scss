@@ -11,3 +11,9 @@ $dark-grey-shadow: #7F8C8D;
 $dark-blue: #34495E;
 $dark-blue-shadow: #2C3E50;
 $superdark-grey: #222222;
+
+@mixin mobile-hide {
+	@media only screen and (max-device-width: 768px) {
+	  display: none;
+	}
+}

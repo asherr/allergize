@@ -17,6 +17,12 @@ a {
   border: 0;
 }
 
+.navbar-right {
+  @media only screen and (max-device-width: 768px) {
+    float: right;
+  }
+}
+
 .navbar-inverse .nav > li > a {
   line-height: 28px;
 }
@@ -56,6 +62,7 @@ input[type="text"]:focus {
   position: absolute;
   top: 45%;
   margin-top: -21px;
+  @include mobile-hide;
   input {
     font-size: 28px;
     line-height: 42px;
@@ -138,6 +145,7 @@ a {
   font-weight: bold;
   padding: 0;
   border-radius: 6px;
+  margin-bottom: 10px;
   div {
     .option {
       height: 48px;
@@ -188,6 +196,7 @@ a {
   color: $superdark-grey;
   border-radius: 6px;
   margin-right: 10px;
+  margin-bottom: 10px;
   padding-top: 12px;
   padding-bottom: 12px;
   &:last-of-type {
@@ -212,4 +221,16 @@ a {
     -moz-transition: background-color .25s, color .25s, border-bottom-color .25s;
     -o-transition: background-color .25s, color .25s, border-bottom-color .25s;
     transition: background-color .25s, color .25s, border-bottom-color .25s;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .navbar-right {
+    float: right;
+  }
+  .mobile-hide {
+    display: none !important;
+  }
 }

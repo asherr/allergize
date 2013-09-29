@@ -10,12 +10,13 @@
   %body
     .container
       %header
-        =image_tag('logo 1.png')
+        %a{:href=>root_url}
+          =image_tag('logo 1.png')
       %nav.navbar.navbar-inverse{role: "navigation"}
         %ul.nav.navbar-nav
           %li
             %a{:href=>root_url}
-              %span.glyphicon.glyphicon-home
+              %span.glyphicon.glyphicon-home.mobile-hide
               Home
           %li.active
             %a
@@ -34,7 +35,7 @@
               = link_to "Sign In", new_user_session_path
             %li
               = link_to "Sign Up", new_user_registration_path
-          %li
+          %li.mobile-hide
             %form.navbar-form.navbar-right{role: "search"}
               .form-group
                 %input#orgbar.twitter-typeahead.tt-query.form-control{placeholder: "Where are you eating?", type: "text"}/
