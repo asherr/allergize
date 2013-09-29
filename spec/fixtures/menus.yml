@@ -1,3 +1,15 @@
 Diner:
   name: Diner
   organization: UMD
+
+251:
+  name: 251 North
+  organization: UMD
+
+DollarMenu:
+  name: Dollar Menu
+  organization: McDonalds
+
+HomeCookingTuesday:
+  name: Tuesday's Dinner
+  organization: YourMom
