@@ -43,7 +43,42 @@ Oatmeal:
   assurances: tree_nut_free, gluten_free, dairy_free, egg_free
   menu: Diner
 
+Panini:
+  name: Panini
+  assurances: tree_nut_free
+  menu: 251
+
+GrilledChicken:
+  name: Grilled Chicken
+  assurances: tree_nut_free, gluten_free, dairy_free, egg_free
+  menu: 251
+
+SevenLayerBurrito:
+  name: 7 Layer Burrito
+  assurances: tree_nut_free, egg_free
+  menu: Burritos
+
+BaconAndEggBurrito:
+  name: Bacon and Egg Burrito
+  assurances: tree_nut_free
+  menu: Burritos
+
+BeanBurrito:
+  name: Bean Burrito
+  assurances: tree_nut_free, egg_free
+  menu: Burritos
+
+CheesyPotatoBurrito:
+  name: Cheesy Potato Burrito
+  assurances: tree_nut_free, egg_free
+  menu: Burritos
+
 SaltyPimp:
   name: Salty Pimp
-  assurances: tree_nut_free
+  assurances: tree_nut_free, egg_free
+  menu: BigGay
+
+MondaySundae:
+  name: Monday Sundae
+  assurances: egg_free
   menu: BigGay
