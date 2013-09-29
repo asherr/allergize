@@ -1,8 +1,13 @@
 %p#notice= notice
 
-%p
-  %b Name:
-  = @menu.name
+%h3= @menu.name
+
+-for @food in @menu.foods do
+	.food-blurb.col-md-12
+		%h1=@food.name
+		.price=@food.price
+		-for @assurance in @food.assurances do
+			.assurance=@assurance.name.titleize
 
 = link_to 'Edit', edit_menu_path(@menu)
 \|

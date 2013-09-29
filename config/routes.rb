@@ -1,5 +1,9 @@
 Allergize::Application.routes.draw do
-  root :to => "pages#home"
+  authenticated :user do
+    root :to => "pages#home"
+  end
+
+  root :to => "pages#landing_page"
 
   resources :foods
 
